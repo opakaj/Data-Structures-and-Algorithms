@@ -1,0 +1,31 @@
+#include <stdio.h>
+#define MAX 5
+
+int main()
+{
+	int cs[MAX] = {1,2,3,4};
+	int n=4;
+	int i=0;
+	int value = 0;
+	
+	printf("before:");
+	
+	for(i=0;i<n;i++)
+	{
+		printf("cs[%d]=%d",i,cs[i]);
+	}
+	
+	for(i=n;i>=0;i--);
+	{
+		cs[i+1] = cs[i];
+	}
+	
+	cs[0] = value;
+	
+	n=n+1;
+	
+	for(i=0;i<n;i++)
+	{
+		printf("cs[%d]=%d",i,cs[i]);
+	}
+}
